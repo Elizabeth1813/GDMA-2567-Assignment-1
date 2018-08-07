@@ -36,6 +36,37 @@
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
+.wrapper{
+	background-color: gray;
+}
 /*--------------------------------------------------------------
 1.0 - Typography
 -------------------------------------------------------------- */
+[class*="col-"]{
+	background-color: orange;
+	
+}
+
+/*--------------------------------------------------------------
+3.0 - Content
+-------------------------------------------------------------- */
+/* 3.1 site structure */
+.push-right{
+	float: right;
+}
+
+
+/*--------------------------------------------------------------
+6.0 - Media Queries
+-------------------------------------------------------------- */
+@media screen and (min-width: 480px){
+	#work .col-1-3, #work .col-2-3{
+	width: 100%;
+}
+}
+@media screen and (max-width: 480px){
+	header .col-1-2{
+	width: 100%;
+}
+	
+}
