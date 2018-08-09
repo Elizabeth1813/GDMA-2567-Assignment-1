@@ -36,37 +36,121 @@
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.wrapper{
-	background-color: gray;
-}
+
 /*--------------------------------------------------------------
 1.0 - Typography
 -------------------------------------------------------------- */
-[class*="col-"]{
-	background-color: orange;
-	
+/* 1.1 headings */
+h1, h2, nav ul li a, header p:first-child{
+	font-family: 'Bebas Neue', sans-serif;
+}
+h1, h2{
+	text-transform: uppercase;
+}
+/* 1.2 body copy */
+h3, p{
+	font-family: 'open sans', sans serif;
+}
+hr{
+	width: 25%;
+}
+.fa-building, .fa-hand-pointer, .fa-mobile-alt, .fa-print{
+	font-size: 40px;
+}
+.fa-facebook-square, .fa-twitter{
+	font-size: 20px;
 }
 
+header p:first-child{
+	font-size: 4rem;
+}
+
+/*--------------------------------------------------------------
+2.0 - Navigation
+-------------------------------------------------------------- */
+/* 2.1 main nav */
+nav ul li{
+	display: inline;
+	text-transform: uppercase;
+	padding: 10px;
+}
+nav ul li a{
+	text-decoration: none;
+	color: #000;
+}
+nav ul li a:hover{
+	color: #70CACA;
+}
 /*--------------------------------------------------------------
 3.0 - Content
 -------------------------------------------------------------- */
 /* 3.1 site structure */
+#bg-image{
+	background: url(../img/bg-image.jpg)no-repeat;
+}
+header p:nth-child(2){
+	width: 25%;
+}
+
+/*--------------------------------------------------------------
+5.0 - Utlities
+-------------------------------------------------------------- */
+/*5.1 background colors */
+#bg-gray{
+	background-color: #efedee;
+	padding: 10px;
+}
+#bg-teal{
+	background-color: #69c0a3;
+	padding: 20px;
+}
+/* 5.2 text colors */
+footer, footer nav ul li a{
+	color: #fff;
+}
+.fa-facebook-square{
+	color: #4455a4;
+}
+.fa-facebook-square:hover{
+	color: #6b7ec1;
+}
+.fa-twitter{
+	color: #33a4dd;
+}
+.fa-twitter:hover{
+	color: #85d8f9;
+}
+/* 5.4 alignments */
 .push-right{
 	float: right;
 }
-
-
+#work, #team header h2, #team p:first-child{
+	text-align: center;
+}
+header p:nth-child(2){
+	text-align: center;
+}
 /*--------------------------------------------------------------
 6.0 - Media Queries
 -------------------------------------------------------------- */
 @media screen and (min-width: 480px){
 	#work .col-1-3, #work .col-2-3{
 	width: 100%;
+		
 }
 }
 @media screen and (max-width: 480px){
-	header .col-1-2{
+	header .col-1-2, .col-1-4, #team .col-1-2, footer .col-1-3, header .col-1-3, header p:nth-child(2){
 	width: 100%;
 }
+	#work h3, #work p{
+		text-align: left;
+	}
+	header{
+		text-align: center;
+	}
+	hr{
+		width: 50%;
+	}
 	
 }
